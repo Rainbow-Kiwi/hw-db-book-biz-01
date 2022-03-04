@@ -1,0 +1,67 @@
+/*
+Entity
+*/
+book
+author
+publisher
+editor
+customer
+order
+contract
+
+
+/*
+Property
+*/
+author_uid
+author_firstName
+author_lastName
+editor_uid
+editor_firstName
+editor_lastName
+publisher_uid
+publisher_firstName
+publisher_lastName
+book_ISBN
+book_title
+book_genre
+book_publisher
+book_author
+book_editor
+customer_uid
+customer_firstName
+customer_lastName
+order_uid
+order_customer
+contract_book
+contract_uid
+contract_author
+contract_royalties
+
+
+
+
+/*
+PKS
+*/
+book_ISBN
+author_uid
+editor_uid
+publisher_uid
+customer_uid
+order_uid
+contract_uid
+
+
+/*
+Tables
+*/
+
+book, author, N:N
+book, editor, N:N
+book, publisher, N:1
+book, order, N:N
+book, contract, 1:N
+order, customer, N:1
+contract, author, N:1
+contract, publisher, N:1
